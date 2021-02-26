@@ -1,15 +1,22 @@
 
 # Exercise-02d-Godot-Template
-Exercise for MSCH-C220, 15 February 2021
+Project 2 for MSCH-C220, 24 February 2021
 
-A Godot Project Template, for use in future projects.
+Project-02: Space Shooter
 
 ## Implementation
 Built using Godot 3.2.3
 Includes WASD mappings (up, left, down, right) and escape to quit.
+Multiple types of attacks
+Multiple enemies
+Scoreboard
+End Screne
+And More
 
 ## References
-None
+https://kenney.nl/assets/space-shoote...​
+https://upload.wikimedia.org/wikipedi...​
+
 
 ## Future Development
 None
