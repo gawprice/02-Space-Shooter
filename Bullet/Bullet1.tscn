@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Bullet/Bullet1.gd" type="Script" id=1]
+[ext_resource path="res://Assests/missle1.png" type="Texture" id=2]
+
+[node name="Bullet1" type="Area2D"]
+collision_layer = 16
+collision_mask = 4
+script = ExtResource( 1 )
+
+[node name="Missle1" type="Sprite" parent="."]
+position = Vector2( 512, 550 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2( 0.5, 0.5 )
+polygon = PoolVector2Array( 9, -13.2, 9, -8.5, 10, -0.9, 10, 16.5, 8.1, 16.5, 7.4, 17.5, -8, 17.5, -10, 16.7, -10, 3.1, -9, 2.4, -9, -14.5, -7, -14.5, -5, -17.2, 6, -17.5 )
+[connection signal="body_entered" from="." to="." method="_on_Bullet1_body_entered"]
