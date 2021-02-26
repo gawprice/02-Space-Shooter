@@ -1,5 +1,5 @@
 
-# Exercise-02d-Godot-Template
+# Project-02-Space-Shooter
 Project 2 for MSCH-C220, 24 February 2021
 
 Project-02: Space Shooter
