@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var velocity = Vector2.ZERO
-var speed = .07
+var speed = .08
 var Bullet1 = load("res://Bullet/Bullet1.tscn")
 var Bullet2 = load("res://Bullet/Bullet2.tscn")
 onready var Bullets = get_node("/root/Game/Bullets")
@@ -37,3 +37,6 @@ func get_input():
 	if Input.is_action_pressed("right"):
 		input_vector += Vector2(1,0) 
 	return input_vector
+
+func die(s):
+	queue_free()

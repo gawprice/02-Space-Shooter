@@ -1,15 +1,15 @@
 extends Area2D
 
-var speed = .5
+var speed = .8
 var velocity = Vector2.ZERO
 
 func _physics_process(_delta):
 	position += velocity
-	velocity.y -= speed
-	if position.y < -600:
+	velocity.y += speed
+	if position.y > 620:
 		queue_free()
 
 
-func _on_Bullet1_body_entered(body):
-	body.die(10)
+func _on_Enemy_Bullet_body_entered(body):
+	body.die(0)
 	queue_free()
