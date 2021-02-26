@@ -1,6 +1,6 @@
-extends Area2D
+extends KinematicBody2D
 
-var speed = .5
+var speed = .08
 var velocity = Vector2.ZERO
 
 func _physics_process(_delta):
@@ -10,6 +10,5 @@ func _physics_process(_delta):
 		queue_free()
 
 
-func _on_Bullet1_body_entered(body):
-	body.die()
+func _on_Timer_timeout():
 	queue_free()

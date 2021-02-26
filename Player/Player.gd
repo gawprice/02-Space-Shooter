@@ -1,8 +1,9 @@
 extends KinematicBody2D
 
 var velocity = Vector2.ZERO
-var speed = .1
+var speed = .07
 var Bullet1 = load("res://Bullet/Bullet1.tscn")
+var Bullet2 = load("res://Bullet/Bullet2.tscn")
 onready var Bullets = get_node("/root/Game/Bullets")
 
 
@@ -18,10 +19,14 @@ func _physics_process(_delta):
 	if position.x <= -512:
 		velocity = Vector2.ZERO
 		position.x = -512
-	if Input.is_action_pressed("shoot1"):
+	if Input.is_action_just_pressed("shoot1"):
 		var bullet1 = Bullet1.instance()
-		bullet1.position = position
+		bullet1.position = position + Vector2 (0,0)
 		Bullets.add_child(bullet1) 
+	if Input.is_action_just_pressed("shoot2"):
+		var bullet2 = Bullet2.instance()
+		bullet2.position = position + Vector2 (0,0)
+		Bullets.add_child(bullet2) 
 
 
 
