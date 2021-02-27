@@ -13,3 +13,6 @@ margin_bottom = 500.0
 text = "You Died! Thanks for Playing  <3"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
